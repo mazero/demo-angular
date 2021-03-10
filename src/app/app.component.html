@@ -1,4 +1,11 @@
+<app-book-preview [book]="books[0]"></app-book-preview>
 
+<hr />
+<img [alt]="bookName" [src]="bookPictureUrl" />
+<button [disabled]="!isAvailable">BOUTON</button>
+
+<hr /><hr />
+<p appMovement=red>Lorem ipseum</p>
 <p [ngClass]="name == 'Robin' ? 'red' : 'blue'" [textContent]=name></p>
 <hr /> <hr />
 <ul>
@@ -28,8 +35,8 @@
 	</ng-container>
 </ul>
 <hr />
-<p>Hello {{ title }} !</p>
-<p>{{ helloWorld() }}</p>
+<p appMovement>Hello {{ title }} !</p>
+<p appMovement>{{ helloWorld() }}</p>
 <ul>
     <li>{{ user.firstname }}</li>
     <li>{{ user.lastname }}</li>

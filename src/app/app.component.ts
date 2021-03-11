@@ -1,3 +1,5 @@
+import { Role } from './@interface/enum/role';
+import { IUser } from './@interface/user';
 import { Book } from './classes/book';
 import { Component } from '@angular/core';
 import { User } from './classes/user';
@@ -11,6 +13,10 @@ import { User } from './classes/user';
 export class AppComponent {
   public title: string = 'Angular Nomades';
   public user: User = new User(100, 'Camille', 'Pasche');
+  public usersWithInterface: IUser = {
+    "num": 200,
+    "firstname": 'Camille',
+   };
   public users: User[] = [
     new User(100, 'Camille', 'Pasche'),
     new User(200, 'Stéhpanie', 'Burdet'),
@@ -40,6 +46,9 @@ export class AppComponent {
 
   public helloWorld(): string {
     return 'Hello World !'
+    if(this.usersWithInterface.role === Role.ADMIN) {
+        
+    }
   }
 
   public displayBlue(): boolean { return this.color === 'blue' ? true : false; } 

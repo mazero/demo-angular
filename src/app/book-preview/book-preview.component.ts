@@ -1,5 +1,5 @@
 import { Book } from './../classes/book';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-book-preview',
@@ -8,9 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BookPreviewComponent implements OnInit {
   @Input() book: Book;
+  @Output() rate: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  public likeIt(value: number) {
+    this.rate.emit(value);
+    console.log('this rate', this.rate);
+  }
 
 }

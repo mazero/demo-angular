@@ -23,6 +23,7 @@ export class AppComponent {
   public bookName = 'ES6 Programming';
   public bookPictureUrl = 'https://picsum.photos/200';
   public isAvailable: boolean = false;
+  public bookRate: number;
   public books: Book[] = [
     new Book('Book 1'),
     new Book('Book 2'),
@@ -38,5 +39,9 @@ export class AppComponent {
   }
 
   public displayBlue(): boolean { return this.color === 'blue' ? true : false; } 
+
+  public onRate($event): void {
+    this.bookRate = $event;
+  }
 
 }

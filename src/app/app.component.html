@@ -1,3 +1,10 @@
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+<label>FontSize (px): <input [(ngModel)]="fontSizePx"></label>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+<h2>De-sugared two-way binding</h2>
+<app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>
+
 <app-book-preview [book]="books[0]" (rate)="onRate($event)"></app-book-preview>
 {{ bookRate }}
 <hr />

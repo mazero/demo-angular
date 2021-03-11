@@ -30,6 +30,9 @@ export class AppComponent {
     new Book('Book 3'),
     new Book('Book 4'),
   ]
+
+  public fontSizePx: number = 16;
+  
   constructor() {
     this.isAvailable = true;
   }
@@ -40,7 +43,7 @@ export class AppComponent {
 
   public displayBlue(): boolean { return this.color === 'blue' ? true : false; } 
 
-  public onRate($event): void {
+  public onRate($event: number): void {
     this.bookRate = $event;
   }
 

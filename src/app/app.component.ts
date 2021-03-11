@@ -19,6 +19,7 @@ export class AppComponent {
   public tab: number[] = [1, 2, 3, 4, 5, 10, 11, 12, 14, 20 ,40 ,60, 90];
   public name: string = 'Robin';
   public color: string = 'red';
+  public today: number = Date.now();
 
   public bookName = 'ES6 Programming';
   public bookPictureUrl = 'https://picsum.photos/200';
@@ -32,7 +33,7 @@ export class AppComponent {
   ]
 
   public fontSizePx: number = 16;
-  
+
   constructor() {
     this.isAvailable = true;
   }

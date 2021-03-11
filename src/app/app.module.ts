@@ -7,13 +7,19 @@ import { MovementDirective } from './directives/movement.directive';
 import { BookPreviewComponent } from './book-preview/book-preview.component';
 import { SizerComponent } from './sizer/sizer.component';
 import { FormsModule } from '@angular/forms';
+import { GetCharPipe } from './pipes/get-char.pipe';
+import { TruncatePipe } from './pipes/truncate.pipe';
+import { BookListComponent } from './book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovementDirective,
     BookPreviewComponent,
-    SizerComponent
+    SizerComponent,
+    GetCharPipe,
+    TruncatePipe,
+    BookListComponent
   ],
   imports: [
     BrowserModule,

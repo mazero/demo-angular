@@ -1,6 +1,16 @@
+<p>{{ "This will be truncated with the default pipe settings. It's cool though, that's supposed to happen!" | truncate: 30: "***" }}</p>
+
+
+{{ "camille" | getChar: 4 }}
+<hr />
+<hr />
 <app-sizer [(size)]="fontSizePx"></app-sizer>
 <label>FontSize (px): <input [(ngModel)]="fontSizePx"></label>
-<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+<div [style.font-size.px]="fontSizePx">{{ "Resizable Text" | uppercase }}</div>
+<p>{{ today | date | uppercase}}</p>
+<div *ngFor="let item of {'b': 1, 'a': 1} | keyvalue">
+	{{ item.key }} - {{ item.value }}
+</div>
 
 <h2>De-sugared two-way binding</h2>
 <app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>

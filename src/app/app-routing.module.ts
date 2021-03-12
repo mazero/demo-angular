@@ -1,3 +1,4 @@
+import { UserComponent } from './user/user.component';
 import { JokeListComponent } from './joke/joke-list/joke-list.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { BookListComponent } from './book-list/book-list.component';
@@ -7,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path: 'jokes', component: JokeListComponent},
+  {path: 'users', component: UserComponent},
   {path: 'books', component: BookListComponent},
   {path: '404', component: NotfoundComponent},
   {path: '**', redirectTo: '/404'}

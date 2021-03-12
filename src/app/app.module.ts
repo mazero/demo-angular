@@ -46,6 +46,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { HeaderComponent } from './@shared/header/header.component';
 import { JokeFormComponent } from './joke/joke-form/joke-form.component';
 import { JokeListComponent } from './joke/joke-list/joke-list.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { JokeListComponent } from './joke/joke-list/joke-list.component';
     NotfoundComponent,
     HeaderComponent,
     JokeFormComponent,
-    JokeListComponent
+    JokeListComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

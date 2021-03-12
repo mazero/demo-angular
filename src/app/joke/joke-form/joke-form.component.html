@@ -1,0 +1,11 @@
+<div class="form">
+<h4>Create joke <small>(JokeFormComponent)</small></h4>
+<p>
+    <input type="text" placeholder="Enter the setup" #setup>
+</p>
+<p>
+    <input type="text" placeholder="Enter the punchline" #punchline>
+</p>
+<button type="button" (click)="createJoke(setup.value, punchline.value)">Create</button>
+</div>
+

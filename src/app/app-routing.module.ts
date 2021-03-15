@@ -5,8 +5,10 @@ import { BookListComponent } from './book-list/book-list.component';
 import { JokeComponent } from './joke/joke.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ObservableComponent } from './observable/observable.component';
 
 const routes: Routes = [
+  {path: 'observables', component: ObservableComponent},
   {path: 'jokes', component: JokeListComponent},
   {path: 'users', component: UserComponent},
   {path: 'books', component: BookListComponent},

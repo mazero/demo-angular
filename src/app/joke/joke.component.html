@@ -1,5 +1,9 @@
-<div>
-    <h4><ng-content select=".setup"></ng-content></h4>
-    <p [hidden]="data.hide"><ng-content select=".punchline"></ng-content></p>
-    <button (click)="data.toogle()">Tell me</button>
-</div>
+<mat-card>
+    <mat-card-content>
+        <h4><ng-content select=".setup"></ng-content></h4>
+        <p [hidden]="data.hide"><ng-content select=".punchline"></ng-content></p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="accent" (click)="data.toogle()">Tell me</button>
+    </mat-card-actions>
+  </mat-card>

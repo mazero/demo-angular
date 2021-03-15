@@ -2,5 +2,6 @@
 <ul>
     <li *ngFor="let user of users">
         {{ user.num }}  {{ user.firstname }} {{ user.lastname }}
+        <button (click)="removeUser(user)">X</button>
     </li>
 </ul>

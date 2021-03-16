@@ -1,0 +1,10 @@
+{
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "typicode" },
+      { "id": 2, "title": "json-server", "author": "typicode" },
+      { "id": 3, "title": "json-server", "author": "typicode" }
+    ],
+    "users": [
+        { "id": 1, "firstname": "Camille", "lastname": "Pasche"}
+    ]
+}

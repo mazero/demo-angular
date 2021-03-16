@@ -20,20 +20,7 @@ export class ObservableComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    const random = Math.random();
-    const observable = Rx.Observable.create((observer) => {
-      observer.next(random);
-  });
-  // subscription 1
-  observable.subscribe((data) => {
-    console.log(data); // 0.24957144215097515 (random number)
-  });
-  // subscription 2
-  observable.subscribe((data) => {
-     console.log(data); // 0.004617340049055896 (random number)
-  });
-
-     /* const subject: AsyncSubject<number> = new AsyncSubject<number>();
+  const subject: AsyncSubject<number> = new AsyncSubject<number>();
     subject.next(0);
     subject.subscribe({ next: (value) => console.log(`A : ${value}`)})
 
@@ -43,7 +30,7 @@ export class ObservableComponent implements OnInit, OnDestroy {
     subject.subscribe({ next: (value) => console.log(`B : ${value}`)})
     subject.complete();
 
-    // number of elements in the history !!!
+ /*   // number of elements in the history !!!
    const subject: ReplaySubject<number> = new ReplaySubject<number>(1);
     subject.next(0);
     subject.subscribe({ next: (value) => console.log(`A : ${value}`)})
